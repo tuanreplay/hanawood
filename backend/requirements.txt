@@ -8,3 +8,4 @@ opencv-python==4.8.1.78
 pydantic==2.5.0
 python-dotenv==1.0.0
 cors==1.0.1
+sqlalchemy==2.0.36
