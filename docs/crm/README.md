@@ -2,6 +2,8 @@
 
 Tài liệu này ghi lại kết quả nghiên cứu các CRM marketing phổ biến, quyết định phạm vi cho phiên bản đầu (MVP), và lộ trình tiếp theo. Mã nguồn nằm tại `backend/crm/`.
 
+Module **Hệ thống giá & Báo giá** (báo giá hoàn thiện, vật tư, nhà thầu): xem [QUOTATION.md](QUOTATION.md).
+
 ## 1. Nghiên cứu nhanh: CRM marketing chuyên nghiệp thường có gì
 
 Tham khảo HubSpot Marketing Hub, Salesforce Marketing Cloud, Zoho CRM, Mailchimp/Brevo và các giải pháp tương tự. Nhóm tính năng cốt lõi:
@@ -30,7 +32,7 @@ Tham khảo HubSpot Marketing Hub, Salesforce Marketing Cloud, Zoho CRM, Mailchi
 
 ## 3. Phạm vi MVP đã build
 
-Đã làm (có test, 11 test pass):
+Đã làm (có test):
 
 - Contacts: tạo (dedupe theo email, chuẩn hóa email/tag), sửa, tìm/lọc theo stage, tag, từ khóa; xóa (right-to-erasure).
 - Timeline (`crm_activities`): ghi lại tạo mới, đổi stage, đồng ý/rút đồng ý, hủy đăng ký, gửi email.
@@ -85,7 +87,7 @@ Quyết định:
 ```bash
 cd backend
 pip install -r requirements-dev.txt   # hoặc chỉ cần fastapi, sqlalchemy, pydantic
-python -m pytest                      # 11 test
+python -m pytest                      # toàn bộ test CRM + báo giá
 uvicorn crm.app:app --reload          # http://localhost:8000/docs
 ```
 
